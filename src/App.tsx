@@ -1,4 +1,8 @@
 import "./styles/global.css";
+import dayjs from "dayjs";
+import "dayjs/locale/en";
+
+dayjs.locale("en");
 
 import { Header } from "./components/Header";
 import { SummaryTable } from "./components/SummaryTable";
