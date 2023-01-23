@@ -9,7 +9,7 @@ export function ProgressBar({ progress }: ProgressBarProps) {
         role="progressbar"
         aria-label="Daily habit progress on selected day"
         aria-valuenow={progress}
-        className="h-3 rounded-xl bg-violet-600 w-3/4"
+        className="h-3 rounded-xl bg-violet-600 w-3/4 transition-all"
         style={{
           width: `${progress}%`,
         }}

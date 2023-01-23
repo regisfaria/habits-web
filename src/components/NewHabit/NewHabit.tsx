@@ -7,7 +7,7 @@ export function NewHabit() {
     <Dialog.Root>
       <Dialog.Trigger
         type="button"
-        className="border border-violet-500 font-semibold rounded-lg px-6 py-4 flex items-center gap-3 hover:border-violet-300"
+        className="border border-violet-500 font-semibold rounded-lg px-6 py-4 flex items-center gap-3 hover:border-violet-300 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background"
       >
         <Plus size={20} className="text-violet-500" />
         New Habit
@@ -20,7 +20,7 @@ export function NewHabit() {
             <X
               size={24}
               aria-label="Close"
-              className="absolute right-6 top-6 text-zinc-400 hover:text-zinc-200"
+              className="absolute right-6 top-6 text-zinc-400 rounded-lg hover:text-zinc-200 focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-zinc-900"
             />
           </Dialog.Close>
 
