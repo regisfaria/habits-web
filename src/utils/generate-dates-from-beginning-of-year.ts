@@ -1,16 +1,18 @@
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
 
+dayjs.extend(utc);
 export function generateDatesFromBeginningOfYear() {
-  const firstDayOfTheYear = dayjs().startOf("year");
-  const today = new Date();
+  const startDate = dayjs().utcOffset(0).startOf("year");
+  const endDate = new Date();
 
-  const dates = [];
-  let compareDate = firstDayOfTheYear;
+  let dateRange = [];
+  let compareDate = startDate;
 
-  while (compareDate.isBefore(today)) {
-    dates.push(compareDate.toDate());
+  while (compareDate.isBefore(endDate)) {
+    dateRange.push(compareDate.toDate());
     compareDate = compareDate.add(1, "day");
   }
 
-  return dates;
+  return dateRange;
 }
